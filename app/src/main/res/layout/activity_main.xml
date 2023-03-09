@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#FFEB3B"
+        android:text="Reconocimiento de Edificio"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/black"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtresult"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo">
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/txtresult"
+        android:layout_width="match_parent"
+        android:layout_height="17dp"
+        android:layout_margin="10dp"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:text="Resultados:"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/txtresults"
+        app:layout_constraintTop_toBottomOf="@+id/container"
+        tools:layout_editor_absoluteX="10dp" />
+    <TextView
+        android:id="@+id/txtresults"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:text="Enfoque una edificacion"
+        app:layout_constraintBottom_toTopOf="@id/btObject"
+        tools:layout_editor_absoluteX="10dp" />
+
+
+    <Button
+        android:id="@+id/btObject"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_margin="60dp"
+        android:layout_marginBottom="72dp"
+        android:background="@android:color/transparent"
+        android:drawableBottom="@mipmap/iconfci"
+        android:onClick="PersonalizedModel"
+        android:text="Objects"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
